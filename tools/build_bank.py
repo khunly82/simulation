@@ -17,7 +17,7 @@ sys.path.insert(0, str(HERE))
 import references as R  # noqa: E402
 
 STATEMENTS = json.loads((HERE / "statements.json").read_text(encoding="utf-8"))
-OUT = HERE.parent / "coderbyte_sim" / "bank.json"
+OUTS = [HERE.parent / "coderbyte_sim" / "bank.json", HERE.parent / "web" / "public" / "bank.json"]
 
 # (num source, tier, fonction, paramètres, note, samples[(args, attendu)], hidden[args])
 Q = [
@@ -129,9 +129,12 @@ def build():
             "starter": f"def {func}({params}):\n    # écrivez votre code ici\n    return 0\n",
             "tests": tests,
         })
-    OUT.write_text(json.dumps({"questions": questions}, ensure_ascii=False, indent=1), encoding="utf-8")
+    data = json.dumps({"questions": questions}, ensure_ascii=False, indent=1)
+    for out in OUTS:
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(data, encoding="utf-8")
     print(f"{len(questions)} questions, "
-          f"{sum(len(q['tests']) for q in questions)} tests -> {OUT}")
+          f"{sum(len(q['tests']) for q in questions)} tests -> " + ", ".join(str(o) for o in OUTS))
 
 
 if __name__ == "__main__":

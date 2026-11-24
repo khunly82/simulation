@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulateur d'entretien technique</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="screen-start" class="screen center" hidden>
+  <div class="card">
+    <h1>Simulateur d'entretien technique</h1>
+    <p class="muted">Langage : Python</p>
+    <ul id="rules"></ul>
+    <form id="start-form">
+      <label for="name">Votre nom</label>
+      <input id="name" autocomplete="off" required maxlength="60">
+      <button id="btn-start" type="submit" disabled>Démarrer le test</button>
+    </form>
+    <p id="py-status" class="muted">Chargement de Python…</p>
+  </div>
+</section>
+
+<section id="screen-exam" class="screen exam" hidden>
+  <header>
+    <div id="q-label" class="q-label"></div>
+    <div class="timer"><span class="muted">Temps restant</span> <span id="timer">50:00</span></div>
+  </header>
+  <main>
+    <article id="statement" class="statement"></article>
+    <div class="right">
+      <div class="editor">
+        <pre id="gutter" aria-hidden="true"></pre>
+        <textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off"></textarea>
+      </div>
+      <pre id="output" class="output"></pre>
+    </div>
+  </main>
+  <footer>
+    <button id="btn-run" class="secondary">▶ Exécuter les tests d'exemple</button>
+    <span class="muted hint">Ctrl/⌘ + Entrée · Aucun retour arrière après validation</span>
+    <button id="btn-next"></button>
+  </footer>
+</section>
+
+<section id="screen-grading" class="screen center" hidden>
+  <div class="card">
+    <h1>Test terminé</h1>
+    <p>Correction en cours (tous les cas de test, y compris cachés)…</p>
+    <div class="spinner"></div>
+  </div>
+</section>
+
+<section id="screen-result" class="screen center" hidden>
+  <div class="card wide">
+    <h1>Résultats</h1>
+    <p id="res-sub" class="muted"></p>
+    <p id="res-score" class="score"></p>
+    <table>
+      <thead><tr><th>Question</th><th>Niveau</th><th>Cas réussis</th><th>Statut</th></tr></thead>
+      <tbody id="res-rows"></tbody>
+    </table>
+    <p id="res-saved" class="muted"></p>
+    <div class="row">
+      <button id="btn-download" class="secondary">Télécharger le rapport (JSON)</button>
+      <button id="btn-new">Nouveau test</button>
+    </div>
+  </div>
+</section>
+
+<dialog id="dlg">
+  <p id="dlg-msg"></p>
+  <menu>
+    <button type="button" id="dlg-cancel" class="secondary">Annuler</button>
+    <button type="button" id="dlg-ok">Confirmer</button>
+  </menu>
+</dialog>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
