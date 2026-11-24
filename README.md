@@ -54,7 +54,7 @@ Options : `--minutes 10` (durée réduite pour essayer), `--seed 42` (tirage rep
 
 ## Banque de questions
 
-22 questions (8 faciles, 7 moyennes, 7 difficiles) dont les énoncés viennent de
+36 questions (12 faciles, 12 moyennes, 12 difficiles) dont les énoncés viennent de
 [gutty333/Easy-Programming-Challenges](https://github.com/gutty333/Easy-Programming-Challenges)
 (dépôt de solutions C++ : seuls les énoncés sont repris, les tests et solutions Python
 sont propres à ce projet). Ajouter une question :

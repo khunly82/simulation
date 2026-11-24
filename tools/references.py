@@ -255,3 +255,140 @@ def ProductDigits(num):
             d = len(f"{a}") + len(f"{num // a}")
             best = d if best is None else min(best, d)
     return best
+
+
+# ---- lot 2 (14 questions)
+
+def SwapCase(str):
+    return str.swapcase()
+
+
+def MultiplicativePersistence(num):
+    n = 0
+    while num >= 10:
+        p = 1
+        for d in f"{num}":
+            p *= int(d)
+        num = p
+        n += 1
+    return n
+
+
+def LargestPair(num):
+    s = f"{num}"
+    return max(int(s[i:i + 2]) for i in range(len(s) - 1))
+
+
+def HammingDistance(strArr):
+    return sum(a != b for a, b in zip(strArr[0], strArr[1]))
+
+
+def LetterCount1(str):
+    best, best_word = 1, None
+    for word in str.split(" "):
+        letters = [c.lower() for c in word if c.isalpha()]
+        score = max(Counter(letters).values(), default=0)
+        if score > best:
+            best, best_word = score, word
+    return best_word if best_word is not None else -1
+
+
+def OverlappingRanges(arr):
+    a, b, c, d, x = arr
+    return "true" if max(0, min(b, d) - max(a, c) + 1) >= x else "false"
+
+
+def EvenPairs(str):
+    for run in re.findall(r"\d+", str):
+        for k in range(1, len(run)):
+            if int(run[:k]) % 2 == 0 and int(run[k:]) % 2 == 0:
+                return "true"
+    return "false"
+
+
+def BinaryReversal(str):
+    bits = bin(int(str))[2:]
+    bits = bits.zfill(-(-len(bits) // 8) * 8)
+    return int(bits[::-1], 2)
+
+
+def BasicRomanNumerals(str):
+    vals = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+    total = 0
+    for i, ch in enumerate(str):
+        v = vals[ch]
+        total += -v if i + 1 < len(str) and vals[str[i + 1]] > v else v
+    return total
+
+
+def LongestIncreasingSequence(arr):
+    best = [1] * len(arr)
+    for i in range(len(arr)):
+        for j in range(i):
+            if arr[j] < arr[i]:
+                best[i] = max(best[i], best[j] + 1)
+    return max(best)
+
+
+def OffLineMinimum(strArr):
+    import heapq
+
+    heap, removed = [], []
+    for item in strArr:
+        if item == "E":
+            removed.append(f"{heapq.heappop(heap)}")
+        else:
+            heapq.heappush(heap, int(item))
+    return ",".join(removed)
+
+
+def WaveSorting(arr):
+    from itertools import permutations
+
+    for p in set(permutations(arr)):
+        if all((p[i] > p[i + 1]) == (i % 2 == 0) and p[i] != p[i + 1] for i in range(len(p) - 1)):
+            return "true"
+    return "false"
+
+
+def ClosestEnemyII(strArr):
+    rows, cols = len(strArr), len(strArr[0])
+    me = next((r, c) for r in range(rows) for c in range(cols) if strArr[r][c] == "1")
+    best = None
+    for r in range(rows):
+        for c in range(cols):
+            if strArr[r][c] == "2":
+                dr, dc = abs(r - me[0]), abs(c - me[1])
+                d = min(dr, rows - dr) + min(dc, cols - dc)
+                best = d if best is None else min(best, d)
+    return 0 if best is None else best
+
+
+_DIRS = {"r": (0, 1), "l": (0, -1), "u": (-1, 0), "d": (1, 0)}
+
+
+def correct_path_solutions(s):
+    """Toutes les complétions valides (utilisé au build pour vérifier l'unicité)."""
+    out = []
+
+    def go(i, r, c, seen, acc):
+        if i == len(s):
+            if (r, c) == (4, 4):
+                out.append("".join(acc))
+            return
+        options = _DIRS if s[i] == "?" else {s[i]: _DIRS[s[i]]}
+        for k, (dr, dc) in options.items():
+            nr, nc = r + dr, c + dc
+            if 0 <= nr < 5 and 0 <= nc < 5 and (nr, nc) not in seen:
+                seen.add((nr, nc))
+                acc.append(k)
+                go(i + 1, nr, nc, seen, acc)
+                acc.pop()
+                seen.discard((nr, nc))
+
+    go(0, 0, 0, {(0, 0)}, [])
+    return out
+
+
+def CorrectPath(str):
+    return correct_path_solutions(str)[0]
