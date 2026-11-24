@@ -1,0 +1,90 @@
+{
+ "2": {
+  "file": "2_FirstFactorial.cpp",
+  "text": "Have the function FirstFactorial(num) take the num parameter being passed and return the factorial of it (e.g. if num = 4, return (4 * 3 * 2 * 1)). The input will always be an integer between 1 and 18."
+ },
+ "3": {
+  "file": "3_LetterChanges.cpp",
+  "text": "For this challenge you will be manipulating characters in a string based off their positions in the alphabet.\nReplace every letter in the string with the letter following it in the alphabet (ie. c becomes d, z becomes a). Then capitalize every vowel in this new string (a, e, i, o, u) and finally return this modified string."
+ },
+ "8": {
+  "file": "8_TimeConvert.cpp",
+  "text": "For this challenge you will be determining the difference in hours and minutes between two given times.\nTake the num parameter being passed and return the number of hours and minutes the parameter converts to (ie. if num = 63 then the output should be 1:3). Separate the number of hours and minutes with a colon."
+ },
+ "18": {
+  "file": "18_SecondGreatLow.cpp",
+  "text": "For this challenge you will determine the second lowest and greatest numbers in an array.\nhave the function SecondGreatLow(arr) take the array of numbers stored in arr and return the second lowest and second greatest numbers, respectively, separated by a space. For example: if arr contains [7, 7, 12, 98, 106] the output should be 12 98. The array will not be empty and will contain at least 2 numbers. It can get tricky if there's just two numbers!"
+ },
+ "22": {
+  "file": "22_DashInsert.cpp",
+  "text": "For this challenge you will be manipulating a string using dashes (-).\nhave the function DashInsert(str) insert dashes ('-') between each two odd numbers in str. For example: if str is 454793 the output should be 4547-9-3. Don't count zero as an odd number."
+ },
+ "27": {
+  "file": "27_AdditivePeristence.cpp",
+  "text": "For this challenge you will be determining the additive persistence for a given number.\nhave the function AdditivePersistence(num) take the num parameter being passed which will always be a positive integer and return its additive persistence which is the number of times you must add the digits in num until you reach a single digit. For example: if num is 2718 then your program should return 2 because 2 + 7 + 1 + 8 = 18 and 1 + 8 = 9 and you stop at 9."
+ },
+ "15": {
+  "file": "15_ArithGeo.cpp",
+  "text": "For this challenge you will determine if numbers within an array follow an arithmetic or geometric sequence.\ntake the array of numbers stored in arr and return the string \"Arithmetic\" if the sequence follows an arithmetic pattern or return \"Geometric\" if it follows a geometric pattern. If the sequence doesn't follow either pattern return -1. An arithmetic sequence is one where the difference between each of the numbers is consistent, where as in a geometric sequence, each term after the first is multiplied by some constant or common ratio. Arithmetic example: [2, 4, 6, 8] and Geometric example: [2, 6, 18, 54]. Negative numbers may be entered as parameters, 0 will not be entered, and no array will contain all the same elements."
+ },
+ "21": {
+  "file": "21_MeanMode.cpp",
+  "text": "For this challenge you will determine if the mode equals the mean in an array.\nhave the function MeanMode(arr) take the array of numbers stored in arr and return 1 if the mode equals the mean, 0 if they don't equal each other (ie. [5, 3, 3, 3, 1] should return 1 because the mode (3) equals the mean (3)). The array will not be empty, will only contain positive integers, and will not contain more than one mode."
+ },
+ "20": {
+  "file": "20_CountingMinutes1.cpp",
+  "text": "For this challenge you will return the total number of minutes between two times.\nhave the function CountingMinutesI(str) take the str parameter being passed which will be two times (each properly formatted with a colon and am or pm) separated by a hyphen and return the total number of minutes between the two times. The time will be in a 12 hour clock format. For example: if str is 9:00am-10:00am then the output should be 60. If str is 1:00pm-11:00am the output should be 1320."
+ },
+ "19": {
+  "file": "19_DivisionSpringified.cpp",
+  "text": "For this challenge you will divide two numbers and return them in a certain format.\nhave the function DivisionStringified(num1,num2) take both parameters being passed, divide num1 by num2, and return the result as a string with properly formatted commas. If an answer is only 3 digits long, return the number with no commas (ie. 2 / 3 should output \"1\"). For example: if num1 is 123456789 and num2 is 10000 the output should be \"12,346\"."
+ },
+ "25": {
+  "file": "25_ThirdGreatest.cpp",
+  "text": "For this challenge you will determine the third largest string within an array.\nhave the function ThirdGreatest(strArr) take the array of strings stored in strArr and return the third largest word within in. So for example: if strArr is [\"hello\", \"world\", \"before\", \"all\"] your output should be world because \"before\" is 6 letters long, and \"hello\" and \"world\" are both 5, but the output should be world because it appeared as the last 5 letter word in the array. If strArr was [\"hello\", \"world\", \"after\", \"all\"] the output should be after because the first three words are all 5 letters long, so return the last one. The array will have at least three strings and each string will only contain letters."
+ },
+ "16": {
+  "file": "16_ArrayAddition.cpp",
+  "text": "For this challenge you will determine if numbers in an array can add up to a certain number in the array.\ntake the array of numbers stored in arr and return the string true if any combination of numbers in the array can be added up to equal the largest number in the array, otherwise return the string false. For example: if arr contains [4, 6, 23, 10, 1, 3] the output should return true because 4 + 6 + 10 + 3 = 23. The array will not be empty, will not contain all the same elements, and may contain negative numbers."
+ },
+ "30": {
+  "file": "30_ChangingSequence.cpp",
+  "text": "For this challenge you will determine when an array changes sequences.\nhave the function ChangingSequence(arr) take the array of numbers stored in arr and return the index at which the numbers stop increasing and begin decreasing or stop decreasing and begin increasing. For example: if arr is [1, 2, 4, 6, 4, 3, 1] then your program should return 3 because 6 is the last point in the array where the numbers were increasing and the next number begins a decreasing sequence. The array will contain at least 3 numbers and it may contains only a single sequence, increasing or decreasing. If there is only a single sequence in the array, then your program should return -1. Indexing should begin with 0."
+ },
+ "42": {
+  "file": "42_TwoSum.cpp",
+  "text": "For this challenge you will determine if two elements can sum to some larger number.\nhave the function TwoSum(arr) take the array of integers stored in arr, and determine if any two numbers (excluding the first element) in the array can sum up to the first element in the array. For example: if arr is [7, 3, 5, 2, -4, 8, 11], then there are actually two pairs that sum to the number 7: [5, 2] and [-4, 11]. Your program should return all pairs, with the numbers separated by a comma, in the order the first number appears in the array. Pairs should be separated by a space. So for the example above, your program would return: 5,2 -4,11"
+ },
+ "57": {
+  "file": "57_TimeDifference.cpp",
+  "text": "For this challenge you will be searching for the smallest time difference.\nhave the function TimeDifference(strArr) read the array of strings stored in strArr which will be an unsorted list of times in a twelve-hour format like so: HH:MM(am/pm). Your goal is to determine the smallest difference in minutes between two of the times in the list. For example: if strArr is [\"2:10pm\", \"1:30pm\", \"10:30am\", \"4:42pm\"] then your program should return 40 because the smallest difference is between 1:30pm and 2:10pm with a difference of 40 minutes. The input array will always contain at least two elements and all of the elements will be in the correct format and unique."
+ },
+ "44": {
+  "file": "44_PalindromeCreator.cpp",
+  "text": "For this challenge you will be determining if you can create a palindrome from a list of numbers.\nhave the function PalindromeCreator(str) take the str parameter being passed and determine if it is possible to create a palindromic string of at least 3 characters by removing 1 or 2 characters. For example: if str is \"abjchba\" then you can remove the characters jc to produce \"abhba\" which is a palindrome. For this example your program should return the two characters that were removed with no delimiter and in the order they appear in the string, so jc. If 1 or 2 characters cannot be removed to produce a palindrome, then return the string not possible. If the input string is already a palindrome, your program should return the string palindrome.  The input will only contain lowercase alphabetic characters.Your program should always attempt to create the longest palindromic substring by removing 1 or 2 characters(see second sample test case as an example).The 2 characters you remove do not have to be adjacent in the string."
+ },
+ "54": {
+  "file": "54_ScaleBalancing.cpp",
+  "text": "For this challenge you will be balancing a scale with weights on it.\nhave the function ScaleBalancing(strArr) read strArr which will contain two elements, the first being the two positive integer weights on a balance scale (left and right sides) and the second element being a list of available weights as positive integers. Your goal is to determine if you can balance the scale by using the least amount of weights from the list, but using at most only 2 weights. For example: if strArr is [\"[5, 9]\", \"[1, 2, 6, 7]\"] then this means there is a balance scale with a weight of 5 on the left side and 9 on the right side. It is in fact possible to balance this scale by adding a 6 to the left side from the list of weights and adding a 2 to the right side. Both scales will now equal 11 and they are perfectly balanced. Your program should return a common separated string of the weights that were used from the list in ascending order, so for this example your program should return the string 2,6\nThere will only ever be one unique solution and the list of available weights will not be empty. It is also possible to add two weights to only one side of the scale to balance it. If it is not possible to balance the scale then your program should return the string not possible."
+ },
+ "75": {
+  "file": "75_StringPeriods.cpp",
+  "text": "For this challenge you will need to find the smallest repeating substring.\nhave the function StringPeriods(str) take the str parameter being passed and determine if there is some substring K that can be repeated N > 1 times to produce the input string exactly as it appears. Your program should return the longest substring K, and if there is none it should return the string -1.\nFor example: if str is \"abcababcababcab\" then your program should return abcab because that is the longest substring that is repeated 3 times to create the final string. Another example: if str is \"abababababab\" then your program should return ababab because it is the longest substring. If the input string contains only a single character, your program should return the string -1."
+ },
+ "59": {
+  "file": "59_VowelSquare.cpp",
+  "text": "For this challenge you will determine if a square of vowels exists in a matrix.\nhave the function VowelSquare(strArr) take the strArr parameter being passed which will be a 2D matrix of some arbitrary size filled with letters from the alphabet, and determine if a 2x2 square composed entirely of vowels exists in the matrix. For example: strArr is [\"abcd\", \"eikr\", \"oufj\"] then this matrix looks like the following:\na b c d\ne i k r\no u f j\nWithin this matrix there is a 2x2 square of vowels starting in the second row and first column, namely, ei, ou. If a 2x2square of vowels is found your program should return the top-left position (row-column) of the square, so for this example your program should return 1-0. If no 2x2 square of vowels exists, then return the string not found. If there are multiple squares of vowels, return the one that is at the most top-left position in the whole matrix. The input matrix will at least be of size 2x2."
+ },
+ "81": {
+  "file": "81_MovingMedian.cpp",
+  "text": "For this challenge you will calculate the median in an array within a sliding window.\nhave the function MovingMedian(arr) read the array of numbers stored in arr which will contain a sliding window size, N, as the first element in the array and the rest will be a list of numbers. Your program should return the Moving Median for each element based on the element and its N-1 predecessors, where N is the sliding window size. The final output should be a string with the moving median corresponding to each entry in the original array separated by commas.\nNote that for the first few elements (until the window size is reached), the median is computed on a smaller number of entries. For example: if arr is [3, 1, 3, 5, 10, 6, 4, 3, 1] then your program should output \"1,2,3,5,6,6,4,3\""
+ },
+ "39": {
+  "file": "39_NextPalindrome.cpp",
+  "text": "For this challenge you will be determining the next largest palindrome.\nhave the function NextPalindrome(num) take the num parameter being passed and return the next largest palindromic number. The input can be any positive integer. For example: if num is 24, then your program should return 33 because that is the next largest number that is a palindrome."
+ },
+ "45": {
+  "file": "45_ProductDigits.cpp",
+  "text": "For this challenge you will be determining the least amount of digits needed to produce a number.\nhave the function ProductDigits(num) take the num parameter being passed which will be a positive integer, and determine the least amount of digits you need to multiply to produce it. For example: if num is 24 then you can multiply 8 by 3 which produces 24, so your program should return 2 because there is a total of only 2 digits that are needed. Another example: if num is 90, you can multiply 10 * 9, so in this case your program should output 3 because you cannot reach 90 without using a total of 3 digits in your multiplication."
+ }
+}
